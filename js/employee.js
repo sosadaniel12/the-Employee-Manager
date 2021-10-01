@@ -9,18 +9,22 @@ class Employee {
   //Create the getName() method for the employee class
   getName(employeeName) {
     this.name = employeeName;
+    return employeeName;
   }
   //Create the getId() method for the employee class
   getId(employeeId) {
     this.id = employeeId;
+    return employeeId;
   }
   //Create the getEmail() method for the employee class
   getEmail(employeeEmail) {
     this.email = employeeEmail;
+    return employeeEmail;
   }
   //Create the getRole() method for the employee class
   getRole(employeeRole) {
     this.role = employeeRole;
+    return employeeRole;
   }
 }
 
