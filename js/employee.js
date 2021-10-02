@@ -8,8 +8,7 @@ class Employee {
   }
   //Create the getName() method for the employee class
   getName(employeeName) {
-    this.name = employeeName;
-    return employeeName;
+    if (employeeName) return this.name;
   }
   //Create the getId() method for the employee class
   getId(employeeId) {
