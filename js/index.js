@@ -13,6 +13,10 @@ inquirer
       name: "nameOfEmployees",
     },
   ])
-  .then((data) => {});
+  .then((data) => {
+    //The data is going to equal what the user types in
+    //Construct an employee object for each name
+  });
+
 //Grab answers and use a promise to run it through
 //Use the employee
