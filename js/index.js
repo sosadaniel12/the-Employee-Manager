@@ -8,9 +8,10 @@ const { type } = require("os");
 inquirer
   .prompt([
     {
-      type: "input",
-      message: "What are the employess name?",
-      name: "nameOfEmployees",
+      type: "list",
+      message: "What role is the employee?",
+      choices: "Manager, Intern, Engineer",
+      name: "roleEmployees",
     },
   ])
   .then((data) => {

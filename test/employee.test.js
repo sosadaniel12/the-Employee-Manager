@@ -6,7 +6,7 @@ describe("Employee", () => {
   describe("getName", () => {
     it("should take in a string and return the name of the employee", () => {
       //Arrange
-      const obj = new Employee();
+      const obj = new Employee("Daniel", 505, "danielsosa2121@gmail.com");
       const employeeName = "Daniel";
       const expectedName = "Daniel";
 
@@ -21,7 +21,7 @@ describe("Employee", () => {
   describe("getId", () => {
     it("should take in a number and return the id of the employee ", () => {
       //Arrange
-      const obj = new Employee();
+      const obj = new Employee("Daniel", 505, "danielsosa2121@gmail.com");
       const employeeId = 505;
       const expectedId = 505;
 
@@ -36,7 +36,7 @@ describe("Employee", () => {
   describe("getEmail", () => {
     it("should take in a string and return an email of the employee", () => {
       //Arrange
-      const obj = new Employee();
+      const obj = new Employee("Daniel", 505, "danielsosa2121@gmail.com");
       const employeeEmail = "danielsosa2121@gmail.com";
       const expectedEmail = "danielsosa2121@gmail.com";
 
@@ -51,7 +51,7 @@ describe("Employee", () => {
   describe("getRole", () => {
     it("should return the string of the role employee", () => {
       //Arrange
-      const obj = new Employee();
+      const obj = new Employee("Daniel", 505, "danielsosa2121@gmail.com");
       const role = "Employee";
       const expectRole = "Employee";
 
