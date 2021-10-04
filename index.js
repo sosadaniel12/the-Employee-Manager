@@ -1,5 +1,5 @@
 //Get all the requires from the other files
-const Employee = require("./employee");
+const Employee = require("./lib/employee");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { type } = require("os");
