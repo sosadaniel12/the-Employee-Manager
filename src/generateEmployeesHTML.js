@@ -1,26 +1,91 @@
 //Makes cards for the employees
 
-const Manager = require("../lib/manager");
-
 //generate a card for the manager card
-const generateManagerCard = () => {
+const generateManagerCard = (manager) => {
   return `
     <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  <div class="card-header">Manager </div>
+  <div class="card-header"> </div>
   <div class="card-body">
-    <h5 class="card-title">${Manager.name}</h5>
+    <h5 class="card-title">${manager.name}</h5>
     <h3>Manager</h3><i class="bi bi-clipboard-check"></i>
-    <p class="id">${Manager.id}</p>
-    <p class="email">${Manager.email}</p>
-    <p class="officeNumber">${Manager.officeNumber}</p>
+    <p class="id">${manager.id}</p>
+    <p class="email">${manager.email}</p>
+    <p class="officeNumber">${manager.officeNumber}</p>
   </div>
 </div>
     `;
 };
 //generate a card for the Engineer card
+const generateEngineerCard = (engineer) => {
+  return `
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header"> </div>
+    <div class="card-body">
+      <h5 class="card-title">${engineer.name}</h5>
+      <h3>Engineer</h3><i class="bi bi-tools"></i>
+      <p class="id">${engineer.id}</p>
+      <p class="email">${engineer.email}</p>
+      <p class="gitHub">${engineer.gitHub}</p>
+    </div>
+  </div>
+    `;
+};
 //generate a card for the Intern card
+const generateInternCard = (intern) => {
+  return `
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header"> </div>
+    <div class="card-body">
+      <h5 class="card-title">${intern.name}</h5>
+      <h3>Intern</h3><i class="bi bi-pencil"></i>
+      <p class="id">${intern.id}</p>
+      <p class="email">${intern.email}</p>
+      <p class="school">${intern.school}</p>
+    </div>
+  </div>
+    `;
+};
+
+const generateHTML = (data) => {
+  // array for cards
+  teamArray = [];
+
+  for (let i = 0; i < data.length; i++) {
+    const employee = data[i];
+    const role = employee.getRole();
+
+    // call manager function
+    if (role === "Manager") {
+      const managerCard = generateManagerCard(employee);
+
+      teamArray.push(managerCard);
+    }
+
+    // call engineer function
+    if (role === "Engineer") {
+      const engineerCard = generateEngineerCard(employee);
+
+      teamArray.push(engineerCard);
+    }
+
+    // call intern function
+    if (role === "Intern") {
+      const internCard = generateInternCard(employee);
+
+      teamArray.push(internCard);
+    }
+  }
+
+  // joining strings
+  const employeeCards = pageArray.join("");
+
+  // return to generated page
+  const generateTeam = generateTeamPage(employeeCards);
+  return generateTeam;
+};
+
 //make the whole html page template
-const generateHtml = () => {
+const generatePage = () => {
   return `
 <!DOCTYPE html>
 <html lang="en">
