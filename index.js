@@ -15,7 +15,7 @@ inquirer
     {
       type: "input",
       message: "What is the name of the Manager",
-      name: "managerName",
+      name: "name",
       validate: (name) => {
         if (name) {
           return name;
@@ -27,7 +27,7 @@ inquirer
     {
       type: "input",
       message: "Enter the Manager ID",
-      name: "managerID",
+      name: "id",
       validate: (id) => {
         if (id) {
           return id;
@@ -39,7 +39,7 @@ inquirer
     {
       type: "input",
       message: "Enter the Manager E-mail",
-      name: "managerEmail",
+      name: "email",
       validate: (email) => {
         if (email) {
           return email;
@@ -51,7 +51,7 @@ inquirer
     {
       type: "input",
       message: "Enter the office number of the Manager",
-      name: "managerOfficeNumber",
+      name: "officeNumber",
       validate: (number) => {
         if (isNaN(number)) {
           return number;
@@ -63,10 +63,8 @@ inquirer
   ])
   .then((managerInfo) => {
     //The data is going to equal what the user types in
-    const { managerName, managerID, managerEmail, managerOfficeNumber } =
-      managerInfo
+    const { name, id, email, officeNumber } = managerInfo;
     //Construct an employee object for each name
   });
 
 //Grab answers and use a promise to run it through
-//Use the employee
