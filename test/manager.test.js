@@ -1,4 +1,4 @@
-const Manager = require("../js/manager");
+const Manager = require("../lib/manager");
 
 test("checks to see if the office number is an actual integer", () => {
   //Arrange

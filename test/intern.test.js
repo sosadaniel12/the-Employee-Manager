@@ -1,4 +1,4 @@
-const Intern = require("../js/intern");
+const Intern = require("../lib/intern");
 
 test("checks the to see if the return is a string for school", () => {
   const obj = new Intern("Daniel", 30, "danielsosa2121@gmail.com", "UTSA");

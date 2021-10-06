@@ -1,4 +1,4 @@
-const Engineer = require("../js/engineer");
+const Engineer = require("../lib/engineer");
 
 describe("Engineer", () => {
   //gets the enigeeners github username
